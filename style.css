@@ -1,12 +1,23 @@
+
+
 body{
     background-color: #1c1c1c;
     color: #c1c1c1;
-    font-size: 1.05em;
+    font-size: 1.09em;
 }
 
 /* global */
+input[type="submit"]{
+    border: none;
+    border-radius: 5px;
+    padding: 7px;
+    font-size: 1.1em;
+    width: auto;
+}
 
-
+input[type="submit"]:hover{
+    cursor: pointer;
+}
 
 /* header content start */
 .head{
@@ -35,13 +46,33 @@ body{
      color: orange;
 }
 
-.head div a{
+.head a{
     text-decoration: none;
     color: white;
 }
+
+.head a:hover{
+    text-decoration: underline;
+}
 /* header content finish */
 
-/* main content start */
+/* foooter */
+footer{
+    padding: 12px;
+    text-align: center;
+    background-color: rgb(37 33 33);
+    font-size: 1.1em;
+}
+
+footer p:nth-of-type(2){
+    text-align: left;
+}
+
+footer img{
+    margin: 9px;
+}
+
+/* intro content start */
 .intro{
     display: flex;
     justify-content: center;
@@ -49,8 +80,6 @@ body{
 }
 
 .intro img{
-    display: flex;
-    background-color: red;
     height: 200px;
     width: 200px;
     border-radius: 50%;
@@ -66,11 +95,74 @@ body{
     color: gray;
 }
 
-/* footer */
-footer{
-    padding: 12px;
-    text-align: center;
-    background-color: rgb(37 33 33);
+/* contact page*/
+#contact{
+    display: flex;
+    padding: 20px;
+    margin-top: 3px;
+    flex-wrap: wrap;
 }
 
-/* contact */
+#contact .side{
+    flex-basis: 45%;
+    justify-content: center;
+    font-size: 1.2em;
+}
+
+.side p:nth-of-type(1){
+    font-size: 3.5em;
+    /* line-height: 70px; */
+    margin-bottom: 7px;
+}
+
+#contact .entry{
+    flex-basis: 35%;
+    height: 350px;
+    border: 1px white solid;
+    color: white;
+}
+
+.entry form{
+    margin: 20px  0 0 20px;
+}
+
+.entry input[type="text"],
+.entry input[type="email"]{
+    width: 350px;
+    height: 25px;
+}
+
+.entry textarea{
+    width: 350px;
+    max-width: 350px;
+    max-height: 76px;
+}
+
+#contact .follow{
+    flex-basis: 100%;
+    margin-top: 7px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.follow p:nth-of-type(1){
+    font-size: 2.4em;
+}
+
+.follow p:nth-of-type(1) span{
+    color: orange;
+}
+
+.follow div a{
+    margin: 9px;
+}
+
+.follow a{
+    text-decoration: none;
+    color: #c1c1c1;
+}
+
+.follow a:hover{
+    text-decoration: underline;
+    color: blue;
+}
