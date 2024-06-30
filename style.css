@@ -166,3 +166,20 @@ footer img{
     text-decoration: underline;
     color: blue;
 }
+
+     /* Project page  */
+
+#project{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    /* background-color: rebeccapurple; */
+    padding: 30px;
+}
+
+.box img{
+    margin: 20px;
+    height: 290px;
+    width: 340px;
+}
