@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 
 
 body{
@@ -13,6 +17,7 @@ input[type="submit"]{
     padding: 7px;
     font-size: 1.1em;
     width: auto;
+    
 }
 
 input[type="submit"]:hover{
@@ -20,20 +25,20 @@ input[type="submit"]:hover{
 }
 
 /* header content start */
-.head{
+header{
     display: flex;
     justify-content: space-between;
     border-bottom: 2px orange solid;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     padding: 10px;
     background-color: black;
 }
 
-.head h1{
+header h1{
     font-size: 2.6em;
 }
 
-.head div ul{
+header div ul{
     font-size: 1.2em;
     list-style: none;
     display: flex;
@@ -42,17 +47,34 @@ input[type="submit"]:hover{
     margin: 43px 20px 0 0 ;
 }
 
-.head .pick a{
+.pick a{
      color: orange;
 }
 
-.head a{
+header a{
     text-decoration: none;
     color: white;
 }
 
-.head a:hover{
+header a:hover{
     text-decoration: underline;
+}
+
+.Hamburger{
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.Hamburger .line {
+    width: 40px;
+    height: 6px;
+    background-color: #c1c1c1;
+    margin: 4px 0;
+}
+
+#menu-toggle {
+    display: none;
 }
 /* header content finish */
 
@@ -72,6 +94,10 @@ footer img{
     margin: 9px;
 }
 
+.bottom{
+    text-align: left;
+}
+
 /* intro content start */
 .intro{
     display: flex;
@@ -83,7 +109,7 @@ footer img{
     height: 200px;
     width: 200px;
     border-radius: 50%;
-    margin: 30px 10px 0 0 ;
+    margin: 30px 10px 0 0;
 }
 
 .intro p:nth-of-type(1){
@@ -115,7 +141,7 @@ footer img{
     margin-bottom: 7px;
 }
 
-#contact .entry{
+.entry{
     flex-basis: 35%;
     height: 350px;
     border: 1px white solid;
@@ -170,16 +196,132 @@ footer img{
      /* Project page  */
 
 #project{
-    display: flex;
+    /* padding: 30px; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 5px;  
+}
+
+.box{
+    display: grid;
     justify-content: center;
-    flex-wrap: wrap;
     text-align: center;
-    /* background-color: rebeccapurple; */
-    padding: 30px;
+    /* margin: 15px 0; */
+    padding: 17px;
+    overflow: hidden;
 }
 
 .box img{
-    margin: 20px;
-    height: 290px;
-    width: 340px;
+    margin: 10px;
+    height: auto;
+    width: 410px;
+    object-fit: cover;
+}
+
+.box:nth-of-type(1){
+    grid-column: 1 / 3;  
+}
+
+.box:nth-of-type(2){
+    grid-column: 3 / 5;
+}
+
+.box:nth-of-type(3){
+    grid-column: 1 / 5;
+}
+
+              /* sitereport */
+.content{
+    background-color: #f2f2f2;
+    color: #333;
+}
+.content section{
+    margin: 0;
+    padding: 2px;
+}
+
+@media (max-width: 768px) {
+    header ul{
+        display: none;
+        flex-direction: column;
+        width: 40%;
+        position: fixed;
+        /* top: 20px; */
+        top: 0%;
+        right: 0%;
+        background-color: #333;
+    }
+
+    header ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .Hamburger{
+        display: flex;
+    }
+
+    #menu-toggle:checked + .Hamburger + header ul li {
+        display: flex;
+    }
+
+    header nav,
+    .intro p:nth-of-type(2),
+    .side p:nth-of-type(2),
+    .follow p:nth-of-type(2),
+    .follow p:nth-of-type(3),
+    .entry,
+    footer{
+        font-size: 0.9em;
+    }
+
+    .intro p:nth-of-type(1),
+    .side p:nth-of-type(1),
+    .follow p:nth-of-type(1){
+        font-size: 1.6em;
+    }
+
+    #contact{
+        display: block;
+    }
+
+    .entry input[type="text"],
+    .entry input[type="email"] {
+       width: 85%;
+        height: 30px;
+    }
+
+     .entry textarea{
+         max-width: 85%;
+     }
+
+    /* project */
+    #project{
+        display: block;
+        
+    }
+    
+    
+
+    .box{
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    .box img{
+        width: 280px;
+        height: auto;
+        margin-right: 20px;
+    }
+
+    .box.reverse{
+        margin-right: 0;
+        margin-left: 20px;
+    }
+
+    .box.reverse{
+        flex-direction: row-reverse;
+    }
+
 }
