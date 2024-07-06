@@ -264,7 +264,7 @@ iframe {
     padding: 2px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 870px) {
     /* header ul{
         display: none;
         flex-direction: column;
@@ -310,6 +310,10 @@ iframe {
         padding: 20px;
         display: block;
       } 
+
+      .open-sidebar-button:hover, .close-sidebar-button:hover{
+        cursor: pointer;
+      }
     
       #sidebar-active:checked ~ .links-container{
         right: 0;
