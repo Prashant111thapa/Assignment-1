@@ -17,7 +17,6 @@ input[type="submit"]{
     padding: 7px;
     font-size: 1.1em;
     width: auto;
-
 }
 
 input[type="submit"]:hover{
@@ -61,6 +60,7 @@ header a:hover{
 }
 
 /* header content finish */
+
 /* menu icon  */
 .menu-container{
     height: 100%;
@@ -126,7 +126,7 @@ footer img{
     color: gray;
 }
 
-/* contact page*/
+     /* contact page*/
 #contact{
     display: flex;
     padding: 20px;
@@ -142,7 +142,6 @@ footer img{
 
 .side p:nth-of-type(1){
     font-size: 3.5em;
-    /* line-height: 70px; */
     margin-bottom: 7px;
 }
 
@@ -243,18 +242,20 @@ footer img{
 }
 
 .video-demo {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
     max-width: 800px;
     width: 100%;  
     margin: 10px;
     padding: 15px;
-    box-sizing: border-box;
 }
 
 .embed-video {
-position: relative;
-padding-bottom: 20%;
-overflow: hidden;
-height: 600px; 
+    position: relative;
+    padding-bottom: 20%;
+    overflow: hidden;
+    height: 600px; 
 }
 
 .embed-video iframe{
